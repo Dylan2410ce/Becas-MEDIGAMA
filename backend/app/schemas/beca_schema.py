@@ -32,4 +32,3 @@ class ResultadoBecaSchema(BaseModel):
     monto: float
     estado: str
     descripcion: str
-

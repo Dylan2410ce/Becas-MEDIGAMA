@@ -7,8 +7,6 @@ const state = {
   selectedApplicant: null
 };
 
-
-
 const loginView = document.getElementById("loginView");
 const appView = document.getElementById("appView");
 const content = document.getElementById("content");

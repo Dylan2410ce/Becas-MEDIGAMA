@@ -1,0 +1,92 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="uml-becas-medigama" name="UML Becas Medigama">
+    <mxGraphModel dx="1228" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1" value="Becas Medigama - UML&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="420" x="470" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#e8f4ff;strokeColor=#2563eb;" value="" vertex="1">
+          <mxGeometry height="210" width="220" x="70" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="main" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#eafaf1;strokeColor=#0f9f6e;" value="App principal&lt;br&gt;&lt;br&gt;&lt;div&gt;main.py&lt;br&gt;config/database.py&lt;br&gt;&lt;br&gt;Levanta FastAPI, registra rutas&lt;br&gt;y conecta con MySQL.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="230" x="360" y="122.5" as="geometry" />
+        </mxCell>
+        <mxCell id="controllers" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#eef2ff;strokeColor=#4f46e5;" value="Controller&lt;br&gt;&lt;br&gt;&lt;div&gt;auth_controller.py&lt;br&gt;usuario_controller.py&lt;br&gt;solicitante_controller.py&lt;br&gt;beca_controller.py&lt;br&gt;reporte_controller.py&lt;br&gt;&lt;br&gt;Reciben peticiones y llaman services.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="205" width="250" x="650" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="schemas" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#fff7ed;strokeColor=#f59e0b;" value="Schemas&lt;br&gt;&lt;br&gt;&lt;div&gt;usuario_schema.py&lt;br&gt;solicitante_schema.py&lt;br&gt;beca_schema.py&lt;br&gt;&lt;br&gt;Definen los datos que entran&lt;br&gt;y salen de la API.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="220" x="970" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="services" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=90;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#fff1f2;strokeColor=#e11d48;" value="&lt;font&gt;Service&lt;br&gt;auth_service.py&lt;br&gt;usuario_service.py&lt;br&gt;solicitante_service.py&lt;br&gt;beca_service.py&lt;br&gt;&lt;br&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="241" width="530" x="50" y="369" as="geometry" />
+        </mxCell>
+        <mxCell id="serviceDetail2" parent="services" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=2;whiteSpace=wrap;" value="UsuarioService&#xa;Registra, actualiza y recupera contrasena." vertex="1">
+          <mxGeometry height="151" width="270" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="serviceDetail1" parent="services" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=6;whiteSpace=wrap;" value="AuthService&#xa;Hace el login con correo y contrasena." vertex="1">
+          <mxGeometry height="151" width="260" x="270" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="repositories" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#f8fafc;strokeColor=#475569;" value="Repository&lt;br&gt;&lt;br&gt;&lt;div&gt;usuario_repository.py&lt;br&gt;solicitante_repository.py&lt;br&gt;beca_repository.py&lt;br&gt;&lt;br&gt;Buscan, guardan y actualizan datos.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="170" width="250" x="630" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="entities" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=28;resizeParent=1;resizeLast=0;whiteSpace=wrap;html=1;fillColor=#fefce8;strokeColor=#ca8a04;" value="Entity / Model&lt;br&gt;&lt;br&gt;&lt;div&gt;usuario.py&lt;br&gt;solicitante.py&lt;br&gt;beca.py&lt;br&gt;&lt;br&gt;Representan las tablas del sistema.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="230" x="920" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="usuarioModel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;" value="Usuario&#xa;id, nombre, correo, telefono, contrasena, rol" vertex="1">
+          <mxGeometry height="80" width="280" x="30" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="solicitanteModel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;" value="Solicitante&#xa;usuario_id, datos academicos, datos economicos,&#xa;indice_vulnerabilidad, categoria_sugerida, estado_solicitud" vertex="1">
+          <mxGeometry height="100" width="340" x="510" y="780" as="geometry" />
+        </mxCell>
+        <mxCell id="becaModel" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#94a3b8;" value="Beca&#xa;id_solicitante, categoria, monto_total,&#xa;estado, descripcion" vertex="1">
+          <mxGeometry height="80" width="250" x="1080" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="database" parent="1" style="shape=cylinder3d;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#fee2e2;strokeColor=#dc2626;" value="MySQL&#xa;Base de datos becas_medigama&#xa;&#xa;Guarda usuarios, solicitantes y becas." vertex="1">
+          <mxGeometry height="130" width="150" x="1180" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="frontend" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="main" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="main" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="controllers" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="controllers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="schemas" value="usa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="controllers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="services" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="services" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="repositories" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="repositories" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="entities" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="entities" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="database" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel8" edge="1" parent="1" source="usuarioModel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="solicitanteModel" value="1 usuario puede tener 1 solicitud">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel9" edge="1" parent="1" source="solicitanteModel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;" target="becaModel" value="1 solicitud puede generar 1 beca">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="M0JPidnVhMkIqDTR_XDj-2" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;span style=&quot;font-weight: 700;&quot;&gt;Frontend&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;index.html&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;app.js&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;styles.css&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;Muestra login, panel estudiante&lt;/span&gt;&lt;br style=&quot;font-weight: 700;&quot;&gt;&lt;span style=&quot;font-weight: 700;&quot;&gt;y panel administrador.&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="130" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="serviceDetail3" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=2;whiteSpace=wrap;" value="SolicitanteService&#xa;Valida solicitud y calcula indice/categoria." vertex="1">
+          <mxGeometry height="52" width="260" x="50" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="serviceDetail4" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=8;spacingTop=2;whiteSpace=wrap;" value="BecaService&#xa;Asigna becas, controla presupuesto y reportes." vertex="1">
+          <mxGeometry height="62" width="260" x="320" y="525" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
