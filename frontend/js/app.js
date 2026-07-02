@@ -5,7 +5,7 @@ const state = {
   view: localStorage.getItem("bm_view") || "perfil",
   applicants: [],
   selectedApplicant: null
-};+
+};
 
 
 
